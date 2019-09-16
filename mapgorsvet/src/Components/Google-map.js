@@ -14,7 +14,8 @@ export default function GoogleMaps() {
   return (
     <div style={{width: '100%', height: '100vh'}}>
       <WrappedMap 
-        googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyBxslvjoPgptzBC6qj5KWr_SrAosWt63R8&v=3.exp&libraries=geometry,drawing,places`}
+        googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyD6Epik96FL-FqL5rQo3dTkBMgCWeUa9jM
+        &v=3.exp&libraries=geometry,drawing,places`}
         loadingElement={<div style= {{height: '100%'}} />}
         containerElement={<div style= {{height: '100%'}} />}
         mapElement={<div style= {{height: '100%'}} />} />
