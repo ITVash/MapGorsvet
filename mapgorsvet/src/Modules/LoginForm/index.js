@@ -1,21 +1,29 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import "antd/dist/antd.css";
 import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router';
 import './style.sass';
 
 import { Form, Icon, Input, Button } from 'antd';
 
 class LoginForm extends Component {
+  state = {
+    red : false
+  }
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
+        this.setState({red : true});
         console.log('Received values of form: ', values);
       }
     });
   };
-
   render() {
+    const { red } = this.state;
+    if (red) {
+      return <Redirect push to="/main" />
+    }
     const { getFieldDecorator } = this.props.form;
     return (
       <div className='form__auth'>
