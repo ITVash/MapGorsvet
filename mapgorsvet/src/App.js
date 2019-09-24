@@ -2,7 +2,8 @@ import React, { Fragment } from 'react';
 //import logo from './logo.svg';
 import './App.css';
 //import GoogleMaps from './Components/Google-maps';
-import { LoginForm } from './Modules';
+import { LoginForm, RegisterForm } from './Modules';
+import { Route } from 'react-router-dom';
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <div className="App">
       <Fragment>
       {/*<GoogleMaps></GoogleMaps>*/}
-        <LoginForm />
+        <Route exact path={["/", "/login"]} component={ LoginForm } />
+        <Route path="/register" component={ RegisterForm } />
       </Fragment>
     </div>
   );
