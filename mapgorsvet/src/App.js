@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import GoogleMaps from './Components/Google-maps';
+//import GoogleMaps from './Components/Google-maps';
 import { LoginForm } from './Modules';
 
 
