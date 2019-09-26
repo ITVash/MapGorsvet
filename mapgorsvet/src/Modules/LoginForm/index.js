@@ -10,12 +10,15 @@ class LoginForm extends Component {
   state = {
     red : false
   }
+  //const this.setStore = this.props.set;
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
         this.setState({red : true});
+        this.props.set(values);
         console.log('Received values of form: ', values);
+        this.props.auth({values});
       }
     });
   };
