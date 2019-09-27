@@ -16,7 +16,7 @@ export default class GoogleMaps extends Component {
         defaultCenter={{lat: 48.015875, lng: 37.801341}}>
         {this.props.coups.map(item => (
           <Marker key={item.ID}
-            icon={{ url: "/img/control-icon-png-3.jpg", scaledSize: new window.google.maps.Size(15, 15)}}
+            icon={{ url: "/img/control.png", scaledSize: new window.google.maps.Size(20, 20)}}
             title={(item.title)} 
             position={{lat: (item.pos.lat), lng: (item.pos.lng)}}
             onClick={this.props.setSelectCoup.bind(this, item.ID, item)}
