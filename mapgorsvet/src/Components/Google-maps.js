@@ -8,7 +8,6 @@ export default class GoogleMaps extends Component {
     this.items = this.props.coups;
   }
   render() {
-    console.log("mark: ", this.props.coups);
     const WrappedMap = withScriptjs(withGoogleMap((props) =>
       <GoogleMap
         ref={map => {this.map = map; }}
@@ -17,7 +16,7 @@ export default class GoogleMaps extends Component {
         defaultCenter={{lat: 48.015875, lng: 37.801341}}>
         {this.props.coups.map(item => (
           <Marker key={item.ID}
-            icon={{ url: "/img/control-icon-png-3.jpg", scaledSize: new window.google.maps.Size(25, 25)}}
+            icon={{ url: "/img/control-icon-png-3.jpg", scaledSize: new window.google.maps.Size(15, 15)}}
             title={(item.title)} 
             position={{lat: (item.pos.lat), lng: (item.pos.lng)}} />
         ))}
@@ -28,7 +27,6 @@ export default class GoogleMaps extends Component {
         <div style={{width: '100%', height: '100vh'}}>
           <WrappedMap
             onMapIdle={() => {
-              console.log("");
               /*let ne = this.map.getBounds().getNorthEast();
               let sw = this.map.getBounds().getSouthWest();*/
               /*console.log(ne.lat() + ";" + ne.lng());
