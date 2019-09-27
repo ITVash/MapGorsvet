@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from 'react';
-import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from 'react-google-maps';
-
+import {GoogleMap, withScriptjs, withGoogleMap, Marker } from 'react-google-maps';
+import { InfoCoup } from './../Components';
 export default class GoogleMaps extends Component {
   constructor(props) {
     super(props);
@@ -23,12 +23,11 @@ export default class GoogleMaps extends Component {
           />
         ))}
         {this.props.setCoup && (
-          <InfoWindow
-            position={{lat: (this.props.setCoup.pos.lat), lng: (this.props.setCoup.pos.lng)}}
-            onCloseClick={() => {this.props.nullState(null)}}
-          >
-            <div>{this.props.setCoup.title}</div>
-          </InfoWindow>
+          <InfoCoup
+            //position={{lat: (this.props.setCoup.pos.lat), lng: (this.props.setCoup.pos.lng)}}
+            //onCloseClick={() => {this.props.nullState(null)}}
+            items={this.props.setCoup}
+          />
         )}
       </GoogleMap>
     ));
