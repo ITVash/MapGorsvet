@@ -7,6 +7,7 @@ import { SearchBox } from './../../Components';
 
 const Main = ({ fetchCoup, setCurentID, items }) => {
   const [ SearchValue, setValue ] = useState('');
+  const [ setCoup, setSelectCoup ] = useState(null);
   const [ filtered, setFiltered ] = useState(Array.from(items));
   const onSearch = value => {
     setFiltered(items.filter(item => item.title.toLowerCase().indexOf(value.toLowerCase()) >= 0));
@@ -19,15 +20,14 @@ const Main = ({ fetchCoup, setCurentID, items }) => {
       setFiltered(items);
     }
   }, [items]);
-
-  const onSelectCoup = () => {
-
+  const alltt = (id, item) => {
+    setCurentID(id);
+    setSelectCoup(item);
   };
-
   return (
     <React.Fragment>
       <SearchBox onSearch={ onSearch } SearchValue={ SearchValue } />
-      <GoogleMaps coups={ filtered } onSelectCoup={ setCurentID } />
+      <GoogleMaps coups={ filtered } onSelectCoup={ setCurentID } setCoup={ setCoup } setSelectCoup={ alltt } />
     </React.Fragment>
   )
 };

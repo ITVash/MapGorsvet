@@ -1,5 +1,5 @@
 import React, { Fragment, Component } from 'react';
-import {GoogleMap, withScriptjs, withGoogleMap, Marker} from 'react-google-maps';
+import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from 'react-google-maps';
 
 export default class GoogleMaps extends Component {
   constructor(props) {
@@ -18,8 +18,17 @@ export default class GoogleMaps extends Component {
           <Marker key={item.ID}
             icon={{ url: "/img/control-icon-png-3.jpg", scaledSize: new window.google.maps.Size(15, 15)}}
             title={(item.title)} 
-            position={{lat: (item.pos.lat), lng: (item.pos.lng)}} />
+            position={{lat: (item.pos.lat), lng: (item.pos.lng)}}
+            onClick={this.props.setSelectCoup.bind(this, item.ID, item)}
+          />
         ))}
+        {this.props.setCoup && (
+          <InfoWindow
+            position={{lat: (this.props.setCoup.pos.lat), lng: (this.props.setCoup.pos.lng)}}
+          >
+            <div>{this.props.setCoup.title}</div>
+          </InfoWindow>
+        )}
       </GoogleMap>
     ));
     return(
