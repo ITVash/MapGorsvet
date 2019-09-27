@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 //import { auth } from './../../redux/action';
 import { connect } from 'react-redux';
 
@@ -11,9 +11,7 @@ const AuthContainer = (props) => {
     <LoginForm set={props.setAuth} />
   )
 }
-const MapStore = ({auth}) => ({
-  auth: auth.items
-});
+
 const MapDispatch = dispatch => ({
   setAuth: auth => dispatch({
     type: 'AUTH_SET_FORM',

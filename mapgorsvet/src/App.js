@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 //import logo from './logo.svg';
 import './App.css';
 //import GoogleMaps from './Components/Google-maps';
-import { LoginForm, RegisterForm } from './Modules';
+import { RegisterForm } from './Modules';
 import { Auth, Main } from './Components';
 import { connect } from 'react-redux'
 

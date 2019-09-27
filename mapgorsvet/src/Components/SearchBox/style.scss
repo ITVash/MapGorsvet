@@ -1,0 +1,10 @@
+.serch-box {
+  position: absolute;
+  width: 250px;
+  height: 50px;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(236, 233, 233, 1);
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
