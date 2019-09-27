@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from 'react';
 import {GoogleMap, withScriptjs, withGoogleMap, Marker} from 'react-google-maps';
+import { Icon } from 'antd';
 
 export default class GoogleMaps extends Component {
   constructor(props) {
@@ -16,7 +17,10 @@ export default class GoogleMaps extends Component {
         defaultZoom={12}
         defaultCenter={{lat: 48.015875, lng: 37.801341}}>
         {this.props.coups.map(item => (
-          <Marker label={(item.title)} position={{lat: (item.pos.lat), lng: (item.pos.lng)}} />
+          <Marker key={item.ID}
+            icon={{ url: "/img/control-icon-png-3.jpg", scaledSize: new window.google.maps.Size(25, 25)}}
+            title={(item.title)} 
+            position={{lat: (item.pos.lat), lng: (item.pos.lng)}} />
         ))}
       </GoogleMap>
     ));
@@ -33,7 +37,7 @@ export default class GoogleMaps extends Component {
               AIzaSyC-clMXi48vlK3YPn-3hWcnsxO4Kz2T-4A
               */
             }}
-            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyDYvvYa5CoEsPtMYURiutCbXF8UkvvvJsw&v=3.exp&libraries=geometry,drawing,places`}
+            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyDYvvYa5CoEsPtMYURiutCbXF8UkvvvJsw&v=3.exp&language=ru&region=ru&libraries=geometry,drawing,places`}
             loadingElement={<div style= {{height: '100%'}} />}
             containerElement={<div style= {{height: '100%'}} />}
             mapElement={<div style= {{height: '100%'}} />} 
