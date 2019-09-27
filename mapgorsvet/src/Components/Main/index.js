@@ -26,8 +26,15 @@ const Main = ({ fetchCoup, setCurentID, items }) => {
   };
   return (
     <React.Fragment>
-      <SearchBox onSearch={ onSearch } SearchValue={ SearchValue } />
-      <GoogleMaps coups={ filtered } onSelectCoup={ setCurentID } setCoup={ setCoup } setSelectCoup={ alltt } />
+      <SearchBox 
+        onSearch={ onSearch } 
+        SearchValue={ SearchValue } />
+      <GoogleMaps 
+        coups={ filtered } 
+        onSelectCoup={ setCurentID } 
+        setCoup={ setCoup } 
+        setSelectCoup={ alltt } 
+        nullState={ setSelectCoup } />
     </React.Fragment>
   )
 };

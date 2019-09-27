@@ -8,6 +8,10 @@
   height: 40vmin;
   pointer-events: none;
 }
+.gm-fullscreen-control {
+  top: auto !important;
+  bottom: 94px !important;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

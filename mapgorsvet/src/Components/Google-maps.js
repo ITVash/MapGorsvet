@@ -25,6 +25,7 @@ export default class GoogleMaps extends Component {
         {this.props.setCoup && (
           <InfoWindow
             position={{lat: (this.props.setCoup.pos.lat), lng: (this.props.setCoup.pos.lng)}}
+            onCloseClick={() => {this.props.nullState(null)}}
           >
             <div>{this.props.setCoup.title}</div>
           </InfoWindow>
