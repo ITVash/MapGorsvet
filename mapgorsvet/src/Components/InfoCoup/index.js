@@ -15,6 +15,12 @@ const InfoCoup = (props) => {
   }
   return (
     <div className="info-box">
+      <span className="info-box__close" onClick={
+        () => {
+          const wind = document.querySelector(".info-box");
+          wind.classList.toggle("close");
+        }
+      }>X</span>
       <div className="info-box__title">
         <h3>Шкаф - {props.items.title}</h3>
         <span>Находится в - {area[props.items.areaID]}</span>

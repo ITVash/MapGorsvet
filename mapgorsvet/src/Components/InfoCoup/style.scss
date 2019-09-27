@@ -3,7 +3,7 @@
   width: 300px;
   z-index: 9999;
   //height: call(100vh - 50px);
-  background-color: #E0E0E0;
+  background-color: rgb(235, 235, 235);
   left: 10px;
   top: 10px;
   bottom: 10px;
@@ -13,8 +13,21 @@
   padding: 5px 10px;
   overflow-y: auto;
   box-sizing: content-box;
+  transition: all .5s linear;
+  &.close {
+    //display: none !important;
+    //visibility: hidden !important;
+    transform: translateX(-105%);
+  }
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    
+  }
   &::-webkit-scrollbar {
-    width: 5px;  /* Remove scrollbar space */
+    width: 7px;  /* Remove scrollbar space */
     //background: transparent;  /* Optional: just make scrollbar invisible */
   }
   &::-webkit-scrollbar-track {
@@ -22,9 +35,12 @@
   }
   /* Optional: show position indicator in red */
   &::-webkit-scrollbar-thumb {
-      background: rgb(134, 134, 134);
-      height: 5px;
-      width: 5px;
+    background: rgb(134, 134, 134);
+    height: 5px;
+    width: 5px;
+    &:hover {
+      background: rgb(122, 122, 122);
+    }
   }
   &__title {
     text-align: left;
