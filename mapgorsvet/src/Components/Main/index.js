@@ -5,7 +5,7 @@ import GoogleMaps from './../Google-maps';
 import { coupActions } from './../../redux/action';
 import { SearchBox } from './../../Components';
 
-const Main = ({ fetchCoup, items }) => {
+const Main = ({ fetchCoup, setCurentID, items }) => {
   const [ SearchValue, setValue ] = useState('');
   const [ filtered, setFiltered ] = useState(Array.from(items));
   const onSearch = value => {
@@ -19,10 +19,15 @@ const Main = ({ fetchCoup, items }) => {
       setFiltered(items);
     }
   }, [items]);
+
+  const onSelectCoup = () => {
+
+  };
+
   return (
     <React.Fragment>
       <SearchBox onSearch={ onSearch } SearchValue={ SearchValue } />
-      <GoogleMaps coups={ filtered } />
+      <GoogleMaps coups={ filtered } onSelectCoup={ setCurentID } />
     </React.Fragment>
   )
 };

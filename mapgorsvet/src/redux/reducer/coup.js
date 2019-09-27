@@ -1,5 +1,6 @@
 const initialState = {
-  items: []
+  items: [],
+  currentID: null
 }
 
 export default (state = initialState, { type, payload }) => {
@@ -16,6 +17,11 @@ export default (state = initialState, { type, payload }) => {
           ...state,
           payload
         ]
+      };
+      case 'SET_CURRENT_ID':
+        return {
+          ...state,
+          currentID: payload
       };
     default:
       return state;

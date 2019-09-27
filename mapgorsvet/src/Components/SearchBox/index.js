@@ -8,8 +8,8 @@ const SearchBox = ({ onSearch, SearchValue }) => {
       <Input.Search 
         placeholder="Название шкафа"
         style={{ width: 236, top: 8 }}
-        onChange={e => onSearch(e.target.value)}
-        value={ SearchValue }
+        onPressEnter={e => onSearch(e.target.value)}
+        //value={ SearchValue }
       />
     </div>
   )
