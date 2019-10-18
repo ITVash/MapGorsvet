@@ -40,11 +40,12 @@ export default class GoogleMaps extends Component {
               let sw = this.map.getBounds().getSouthWest();*/
               /*console.log(ne.lat() + ";" + ne.lng());
               console.log(sw.lat() + ";" + sw.lng());
-              AIzaSyDYvvYa5CoEsPtMYURiutCbXF8UkvvvJsw
+              AIzaSyAoSvWU3OBhU9kVGv69yE0vKCuwKanS2R0
               AIzaSyC-clMXi48vlK3YPn-3hWcnsxO4Kz2T-4A
+              https://maps.googleapis.com/maps/api/js?key=AIzaSyDwPPeul1SoKE-UzqewgHpmbPm2xniiJwY&v=3.exp&language=ru&region=ru&libraries=geometry,drawing,places
               */
             }}
-            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyC-clMXi48vlK3YPn-3hWcnsxO4Kz2T-4A&v=3.exp&language=ru&region=ru&libraries=geometry,drawing,places`}
+            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyDwPPeul1SoKE-UzqewgHpmbPm2xniiJwY&v=3.exp&libraries=geometry,drawing,places`}
             loadingElement={<div style= {{height: '100%'}} />}
             containerElement={<div style= {{height: '100%'}} />}
             mapElement={<div style= {{height: '100%'}} />} 

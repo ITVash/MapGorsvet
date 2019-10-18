@@ -23,9 +23,10 @@ class LoginForm extends Component {
     });
   };
   render() {
+    console.log("Props",this.props);
     const { red } = this.state;
     if (red) {
-      return <Redirect push to="/main" />
+      return <Redirect push to="/" />
     }
     const { getFieldDecorator } = this.props.form;
     return (

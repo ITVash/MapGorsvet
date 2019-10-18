@@ -5,6 +5,7 @@ body, html, *, #root {
   line-height: 1;
   box-sizing: border-box;
   color: #202020;
+  height: 100%;
 }
 ::before, ::after {
   box-sizing: border-box;

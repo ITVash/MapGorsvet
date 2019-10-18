@@ -1,4 +1,5 @@
 import React from 'react'
+import { Icon } from 'antd'
 import './style.scss';
 const InfoCoup = (props) => {
   console.log("Это для информации", props);
@@ -20,10 +21,10 @@ const InfoCoup = (props) => {
           const wind = document.querySelector(".info-box");
           wind.classList.toggle("close");
         }
-      }>X</span>
+      }><Icon type="close" /></span>
       <div className="info-box__title">
-        <h3>Шкаф - {props.items.title}</h3>
-        <span>Находится в - {area[props.items.areaID]}</span>
+        <h3>{props.items.title}</h3>
+        <span>{area[props.items.areaID]}</span>
       </div>
       <div className="info-box__content">
         <h3>Комплектация</h3>

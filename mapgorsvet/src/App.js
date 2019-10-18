@@ -15,9 +15,9 @@ const App = () => {
     <div className="App">
       <Fragment>
       {/*<GoogleMaps></GoogleMaps>*/}
-        <Route exact path={["/", "/login"]} component={ Auth } />
+        <Route path="/login" component={ Auth } />
         <Route path="/register" component={ RegisterForm } />
-        <Route path="/main" component={ Main } />
+        <Route exact path="/" component={ Main } />
       </Fragment>
     </div>
   );

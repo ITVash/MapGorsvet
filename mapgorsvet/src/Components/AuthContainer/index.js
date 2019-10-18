@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 
 import { LoginForm } from './../../Modules';
 const AuthContainer = (props) => {
-  const { items } = props;
-  console.log(items);
+  const { items, isAuth } = props;
+  console.log(props);
   
   return (
-    <LoginForm set={props.setAuth} />
+    <LoginForm login={isAuth} set={props.setAuth} />
   )
 }
 

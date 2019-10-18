@@ -4,7 +4,8 @@ const initialState = {
       username: 'Vash',
       password: '1234'
     }
-  ]
+  ],
+  isAuth: true
 }
 
 export default (state = initialState, { type, payload }) => {
@@ -12,7 +13,8 @@ export default (state = initialState, { type, payload }) => {
     case 'AUTH_SET_FORM':
       return {
         ...state,
-        items: payload
+        items: payload,
+        isAuth: true
       };
     default:
       return state;
